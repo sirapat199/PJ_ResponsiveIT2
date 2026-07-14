@@ -9,7 +9,7 @@ I'm a full stack developer...
 
 
 ## 🔗 Links
-[!Facebook](https://web.facebook.com/sirxphxtZ)
+[![facebook](https://img.shields.io/badge/facebook-1DA1F2?style=for-the-badge&logo=facebook&logoColor=white)](https://web.facebook.com/sirxphxtZ)
 
 
 ## Other Common Github Profile Sections
