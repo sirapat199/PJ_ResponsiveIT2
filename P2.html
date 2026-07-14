@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Workflow</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="page">
+    <section class="card">
+      <h1>การทำงานกับ GitHub</h1>
+      <p>GitHub ช่วยให้คุณเก็บโค้ดบนเว็บและทำงานร่วมกับทีมได้อย่างสะดวก โดยกระบวนการทั่วไปมีดังนี้</p>
+
+      <ol class="step-list">
+        <li>สร้าง Repository บน GitHub</li>
+        <li>เชื่อม Repository กับเครื่องคอมพิวเตอร์ด้วยคำสั่ง <code>git remote add origin ...</code></li>
+        <li>ส่งโค้ดขึ้น GitHub ด้วยคำสั่ง <code>git push -u origin main</code></li>
+        <li>สร้าง Branch ใหม่เพื่อพัฒนา feature</li>
+        <li>สร้าง Pull Request เพื่อขอ merge เข้า main</li>
+      </ol>
+
+      <div class="code-block">
+        <pre>git clone &lt;repository-url&gt;</pre>
+      </div>
+      <p>ดาวน์โหลดโครงการจาก GitHub มาใช้ในเครื่อง</p>
+
+      <div class="code-block">
+        <pre>git branch feature/login</pre>
+        <pre>git checkout feature/login</pre>
+      </div>
+      <p>สร้างและสลับไปยัง branch ใหม่สำหรับการพัฒนา</p>
+
+      <div class="code-block">
+        <pre>git pull origin main</pre>
+      </div>
+      <p>ดึงข้อมูลล่าสุดจาก branch หลักก่อนเริ่มงาน</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script src="JS/main.js"></script>
+  <script>
+    fetch('header.html').then((res) => res.text()).then((html) => {
+      document.getElementById('header').innerHTML = html;
+    });
+    fetch('footer.html').then((res) => res.text()).then((html) => {
+      document.getElementById('footer').innerHTML = html;
+    });
+  </script>
+</body>
+</html>

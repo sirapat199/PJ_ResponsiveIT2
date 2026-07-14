@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>พื้นฐาน Git</title>
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-    
+  <div id="header"></div>
+
+  <main class="page">
+    <section class="card">
+      <h1>พื้นฐาน Git</h1>
+      <p>Git เป็นเครื่องมือที่ช่วยติดตามการเปลี่ยนแปลงของไฟล์ในโปรเจกต์ โดยคำสั่งพื้นฐานที่ควรรู้มีดังนี้</p>
+
+      <div class="code-block">
+        <pre>git init</pre>
+      </div>
+      <p>ใช้สร้าง Repository ใหม่ในโฟลเดอร์ปัจจุบัน</p>
+
+      <div class="code-block">
+        <pre>git add .</pre>
+      </div>
+      <p>เลือกไฟล์ทั้งหมดที่ต้องการเตรียมเก็บไว้ใน stage</p>
+
+      <div class="code-block">
+        <pre>git commit -m "Add new feature"</pre>
+      </div>
+      <p>บันทึกการเปลี่ยนแปลงเป็นเวอร์ชันใหม่</p>
+
+      <div class="code-block">
+        <pre>git status</pre>
+      </div>
+      <p>ดูสถานะของไฟล์ว่าเปลี่ยนแปลงหรือยัง</p>
+
+      <ol class="step-list">
+        <li>สร้างโฟลเดอร์และไฟล์โปรเจกต์</li>
+        <li>รันคำสั่ง <code>git init</code> เพื่อเริ่มติดตาม</li>
+        <li>ใช้ <code>git add</code> เพื่อเลือกไฟล์ที่ต้องการ</li>
+        <li>ใช้ <code>git commit</code> เพื่อบันทึกเวอร์ชัน</li>
+      </ol>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script src="JS/main.js"></script>
+  <script>
+    fetch('header.html').then((res) => res.text()).then((html) => {
+      document.getElementById('header').innerHTML = html;
+    });
+    fetch('footer.html').then((res) => res.text()).then((html) => {
+      document.getElementById('footer').innerHTML = html;
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git และ GitHub สำหรับผู้เริ่มต้น</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="page">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">แนะนำการใช้ Git และ GitHub</span>
+        <h1>เรียนรู้พื้นฐานการจัดการโค้ดด้วย Git และแชร์โปรเจกต์บน GitHub</h1>
+        <p>Git คือเครื่องมือช่วยติดตามการเปลี่ยนแปลงของไฟล์ ส่วน GitHub คือแพลตฟอร์มสำหรับเก็บโค้ดและทำงานร่วมกับคนอื่นได้อย่างสะดวก</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="P1.html">เริ่มเรียนรู้ Git</a>
+          <a class="btn btn-secondary" href="P2.html">ดู Workflow บน GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>สิ่งที่คุณจะได้เรียนรู้</h2>
+        <ul class="step-list">
+          <li>เข้าใจความแตกต่างระหว่าง Git และ GitHub</li>
+          <li>ใช้คำสั่งพื้นฐานของ Git เช่น init, add, commit, push</li>
+          <li>สร้าง Repository และ Pull Request บน GitHub</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Git คืออะไร</h3>
+        <p>Git คือระบบควบคุมเวอร์ชันที่ช่วยติดตามและจัดการการเปลี่ยนแปลงของไฟล์ในโครงการ</p>
+      </article>
+      <article class="card">
+        <h3>GitHub คืออะไร</h3>
+        <p>GitHub คือบริการเว็บที่ใช้ Git สำหรับเก็บโค้ด แชร์โปรเจกต์ และร่วมมือกันพัฒนาได้</p>
+      </article>
+      <article class="card">
+        <h3>เหตุผลที่ควรใช้</h3>
+        <p>ช่วยเก็บประวัติการเปลี่ยนแปลง ทำงานร่วมกับทีม และป้องกันการสูญเสียไฟล์</p>
+      </article>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script src="JS/main.js"></script>
+  <script>
+    fetch('header.html').then((res) => res.text()).then((html) => {
+      document.getElementById('header').innerHTML = html;
+    });
+    fetch('footer.html').then((res) => res.text()).then((html) => {
+      document.getElementById('footer').innerHTML = html;
+    });
+  </script>
+</body>
+</html>
